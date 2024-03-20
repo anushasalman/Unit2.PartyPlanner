@@ -7,10 +7,6 @@ const state = {
 
 const eventsList = document.querySelector("#events");
 
-const addEventsForm = document.querySelector("#addEvents");
-addEventsForm.addEventListener("submit", addEvents);
-
-
 async function render() {
   await getEvents();
   renderEvents();
@@ -61,14 +57,9 @@ function renderEvents() {
   eventsList.replaceChildren(...locationLiElements);
 }
 
-
-//todo <div></div>
-//todo p id to fix only showing locations and children replacing other properties
-
-
 //! hello
 //?
 //*
-//todo
+//todo 
 ////
-//imp 
+
