@@ -5,9 +5,9 @@ const state = {
   events: [],
 };
 
-const eventList = document.querySelector("#events");
+const eventsList = document.querySelector("#events");
 
-const addEventForm = document.querySelector("#addEvents");
+const addEventsForm = document.querySelector("#addEvents");
 addEventsForm.addEventListener("submit", addEvents);
 
 
@@ -41,22 +41,29 @@ function renderEvents() {
 
   console.log(eventsLiElements);
   eventsList.replaceChildren(...eventsLiElements);
+
+  const descriptionLiElements = state.events.map((events) => {
+    const li = document.createElement('li');
+    li.innerHTML = `${events.description} - ${events.date}`;
+    return li;
+  });
+  
+  console.log(descriptionLiElements);
+  eventsList.replaceChildren(...descriptionLiElements);
+  
+  const locationLiElements = state.events.map((events) => {
+    const li = document.createElement('li');
+    li.innerHTML = `${events.location}`;
+    return li;
+  });
+  
+  console.log(locationLiElements);
+  eventsList.replaceChildren(...locationLiElements);
 }
 
-const eventsLiElements = state.events.map((events) => {
-  const li = document.createElement('li');
-  li.innerHTML = `${events.description} - ${events.date}`;
-  return li;
-});
-
-console.log(eventsLiElements);
-eventsList.replaceChildren(...eventsLiElements);
-
-const eventsLiElements = state.events.map((events) => {
-  const li = document.createElement('li');
-  li.innerHTML = `${events.location}`;
-  return li;
-});
-
-console.log(eventsLiElements);
-eventsList.replaceChildren(...eventsLiElements);
+//! hello
+//?
+//*
+//todo
+////
+//imp 
