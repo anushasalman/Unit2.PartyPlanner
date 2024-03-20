@@ -61,6 +61,11 @@ function renderEvents() {
   eventsList.replaceChildren(...locationLiElements);
 }
 
+
+//todo <div></div>
+//todo p id to fix only showing locations and children replacing other properties
+
+
 //! hello
 //?
 //*
