@@ -57,9 +57,12 @@ function renderEvents() {
   eventsList.replaceChildren(...locationLiElements);
 }
 
+
+// append child not working to not have each one replaced
 //! hello
 //?
 //*
 //todo 
 ////
+//imp
 
